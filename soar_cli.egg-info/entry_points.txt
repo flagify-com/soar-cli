@@ -1,0 +1,2 @@
+[console_scripts]
+soar-cli = soar_client.main:app

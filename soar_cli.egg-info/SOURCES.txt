@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+soar_cli.egg-info/PKG-INFO
+soar_cli.egg-info/SOURCES.txt
+soar_cli.egg-info/dependency_links.txt
+soar_cli.egg-info/entry_points.txt
+soar_cli.egg-info/requires.txt
+soar_cli.egg-info/top_level.txt
+soar_client/__init__.py
+soar_client/client.py
+soar_client/main.py
+soar_client/commands/__init__.py
+soar_client/commands/playbook.py
+tests/test_playbook.py
