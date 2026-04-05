@@ -1,4 +1,4 @@
-# Soar-CLI
+# SOAR-CLI
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -39,29 +39,33 @@ cp .env.example .env
 
 ```bash
 > soar-cli playbook search "暴力破解处置剧本_云上"
+```
 
 ![Playbook Search Result](assets/playbook_search.png)
 
+```bash
 > soar-cli playbook params 1907203516548373
+```
 
 ![Playbook Params Result](assets/playbook_params.png)
 
-> soar-cli playbook execute 1907203516548373 --params '{"src": "66.240.205.34"}'
+```bash
+> soar-cli playbook execute 123 --params '{"src": "66.240.205.34"}'
+Error: Execution failed: 请求参数错误 (400 Bad Request)。详细信息: 剧本不存在
 
+> soar-cli playbook execute 1907203516548373 --params '{"src": "66.240.205.34"}'
 Successfully started execution for Playbook 1907203516548373
 Activity ID: 898e7d68-5389-4055-8e37-6124dd2c0a17
 To check status: soar-cli playbook status 898e7d68-5389-4055-8e37-6124dd2c0a17
 
-
 > soar-cli playbook status 15bf7f98-eb9d-4ea0-bcf8-7ebb39a379b9
-
 Execution Status: WAITING_APPROVE
 To see results: soar-cli playbook result 15bf7f98-eb9d-4ea0-bcf8-7ebb39a379b9
 
 > soar-cli playbook result 15bf7f98-eb9d-4ea0-bcf8-7ebb39a379b9
+```
 
 ![Playbook Result Output](assets/playbook_result.png)
-```
 
 ## 🤖 使用方法 (Agent/大模型 严格 JSON 模式)
 专为 LLMs / AutoGPT / 各种脚手架及调度任务定制。只需在全球任意命令前加上 `--json` (或 `-j`)。
