@@ -26,8 +26,12 @@ state = {"json_mode": False}
 
 def version_callback(value: bool):
     if value:
-        from soar_client import __version__
-        typer.echo(f"soar-cli version: {__version__}")
+        from soar_client import __version__, get_commit_hash
+        commit = get_commit_hash()
+        if commit:
+            typer.echo(f"soar-cli version: {__version__} (commit: {commit})")
+        else:
+            typer.echo(f"soar-cli version: {__version__}")
         raise typer.Exit()
 
 @app.callback()
